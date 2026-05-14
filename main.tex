@@ -1,0 +1,31 @@
+\documentclass[a4paper, 12pt]{article}
+
+%% подключаем стандарт библиографии
+\bibliographystyle{unsrt} 
+
+%% for envirovemt "abstract" in class book
+\usepackage{abstract}
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+%% подключаем преамбулу, в ней содержатся подключение всех необходимых пакетов
+\input{include/preambule.tex}
+
+\begin{document}
+    %% титульник
+    \input{include/title.tex}
+    %% аннотация
+    \input{parts/Annotation.tex}
+    %содержание
+    \tableofcontents{}
+    \newpage
+
+    \input{parts/1Введение} %% Введение
+    \input{parts/2Теоретическая} %% Теоретическая часть
+    \input{parts/3Экспериментальные} %% Экспериментальные исследования
+    \input{parts/4Заключение} %% Заключение
+    \input{parts/5СписокЛитературы} %% Список литературы
+    
+    %% в зависимости от надобности подключаем раздел "Приложениие"
+    % \newpage
+    % \input{Appendix.tex}
+\end{document}
